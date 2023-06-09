@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title> Homepage </title>
+  <link rel="stylesheet" href="asset/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#CBB3B3">
+
+
+<!-- HEADER SECTION -->
+<header>
+  <h1><img src="asset/image/logo.png" width="200px"></h1>
+</p>
+  <nav align="right">
+  <ul>
+  <li><a href="index.html"> Home </a></li>
+  <li><a href="about.html"> About </a></li>
+  <li><a href="education.html"> Education </a></li>
+  <li><a href="entertaiment.html"> Entertaiment </a></li>
+  <li><a href="hometown.html"> Hometown </a></li>
+  <li><a href="gallery.html"> Gallery </a></li>
+  </ul>
+  </nav>
+<br>
+</header>
+
+
+<!-- HOMEPAGE CONTENT -->
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+
+<div class="bg-text">HI! Welcome To My Personal Website 
+<br>
+<a href= "https://instagram.com/_zxnne?igshid=ZGUzMzM3NWJiOQ==" target="_blank">
+<img src= "asset/image/instagram.png" width="62px"> 
+</a>
+<a href= "https://www.facebook.com/profile.php?id=100073109806304" target="_blank">
+<img src= "asset/image/facebook.png" width="77px">
+</a>
+<br>
+<center>
+<!--- APPLYING JAVA APPLET --->
+<!--- TO CALL THE CSS --->
+<div id="clock"> 8:10:45 </div>
+<!--- TO LINK FOR A CURRENT TIME --->
+<script src="clock2.js"></script></center>
+</div>
+
+
+
+<!-- HOMEPAGE CONTENT STYLE -->
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("asset/image/pic_homepage1.jpg"); }
+.img2 { background-image: url("asset/image/pic_homepage2.png"); }
+.img3 { background-image: url("asset/image/pic_homepage6.jpg"); }
+.img4 { background-image: url("asset/image/pic_homepage3.jpg"); }
+.img5 { background-image: url("asset/image/pic_homepage8.jpg"); }
+.img6 { background-image: url("asset/image/pic_homepage7.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 265px;
+  length: 300px
+  padding: 20px;
+  text-align: center;
+}
+</style>
+
+
+</body>
+
+<!-- FOOTER SECTION -->
+    <footer>
+        <p>© 2023 Suzanne Ruran Lut. All rights reserved.
+
+        
+    </footer>
+
+<!-- JAVA APPLET SCRIPT -->
+<script>
+setInterval(showTime, 1000);
+function showTime() {
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	am_pm = "AM";
+
+	if (hour > 12) {
+		hour -= 12;
+		am_pm = "PM";
+	}
+	if (hour == 0) {
+		hr = 12;
+		am_pm = "AM";
+	}
+
+	hour = hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime = hour + ":"
+			+ min + ":" + sec + am_pm;
+
+	document.getElementById("clock")
+			.innerHTML = currentTime;
+}
+showTime();
+</script>
+
+
+</html>
